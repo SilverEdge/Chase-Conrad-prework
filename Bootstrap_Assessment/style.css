@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'monotonregular';
+  src: url('monoton-regular-webfont.woff2') format('woff2'),
+       url('monoton-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  line-height: 1.5;
+  background-image: url("prism.png");
+  background-repeat: repeat;
+}
+
+.jumbotron{
+  background-color: transparent;
+}
+
+main {
+  position: absolute;
+  width: 900px;
+  height:300px;
+  margin-top:-175px;
+  margin-right:-450px;
+  top:50%;
+  right:50%;
+  text-align: center;
+}
+
+.logo{
+  font-family: 'monotonregular';
+  font-size: 35px;
+  padding: 50px;
+  color: white;
+  opacity: .5;
+  cursor:pointer;
+}
+
+.logo:hover{
+  opacity: 1;
+}
