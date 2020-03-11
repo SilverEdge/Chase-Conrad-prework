@@ -1,0 +1,87 @@
+﻿
+
+:root {
+    --teal: #4aaaa5;
+    --heading-font: 'Georgia', Times, Times New Roman, serif;
+
+    --other-fonts: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    --other-font-color: #777;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #777777;
+}
+
+body {
+    
+    background-image: url(../images/pattern.png);
+    background-repeat: repeat;
+}
+
+
+
+h1 {
+    margin: 0;
+    font-family: var(--heading-font);
+    color: var(--teal);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ccc !important;
+}
+
+.navbar-brand {
+    background-color: var(--teal) !important;
+    font-family:var(--heading-font);
+    font-weight:bold;
+    color:white;
+}
+
+.spacer5 {
+    height: 80px;
+}
+
+.navbar-nav > li > a {
+    color: var(--other-font-color);
+    font-family:var(--other-fonts);
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+}
+
+    .navbar-nav > li > a:hover {
+        color: white;
+        background-color: var(--teal) !important;
+    }
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: #673ab7;
+}
+
+
+#about {
+    padding: 50px;
+    height: 600px;
+    color: #fff;
+    background-color: white;
+    border: 2px solid #ccc !important;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px; /* or 950px */
+}
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

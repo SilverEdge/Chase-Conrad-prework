@@ -1,7 +1,7 @@
 var game = {
     words: ['iacocca','shelby','dearborn','fastback','v8','pony'],
     randonWord: function() {return this.words[Math.floor(Math.random()*this.words.length)]},
-    guessesRemaining: 13,
+    guessesRemaining: 12,
     audio: document.getElementById("myAudio"),
     playAudio : function() {
         this.audio.play();
