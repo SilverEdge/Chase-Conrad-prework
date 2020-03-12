@@ -10,7 +10,6 @@
     position: absolute;
     left: 0px;
     top: 50px;
-    display: inline;
     width: 100%;
     z-index:-1;
 }

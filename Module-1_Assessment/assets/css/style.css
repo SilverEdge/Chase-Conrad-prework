@@ -3,7 +3,6 @@
 :root {
     --teal: #4aaaa5;
     --heading-font: 'Georgia', Times, Times New Roman, serif;
-
     --other-fonts: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     --other-font-color: #777;
 }
@@ -58,10 +57,10 @@ h1 {
     display: block;
 }
 
-    .navbar-nav > li > a:hover {
-        color: white;
-        background-color: var(--teal) !important;
-    }
+.navbar-nav > li > a:hover {
+    color: white;
+    background-color: var(--teal) !important;
+}
 
 .navbar-default .navbar-nav > li > a:focus {
     color: #673ab7;
@@ -88,12 +87,11 @@ h1 {
 
 hr{
     margin-top: 50px;
-    
     margin-bottom: 20px;
     border: 0;
-height: 0;
-border-top: 3px solid #999;
-border-bottom: 0px solid white;
+    height: 0;
+    border-top: 3px solid #999;
+    border-bottom: 0px solid white;
 }
 
 footer {
