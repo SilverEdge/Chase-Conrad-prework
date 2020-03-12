@@ -1,10 +1,22 @@
 var game = {
     words: ['iacocca','shelby','dearborn','fastback','v8','pony'],
     randonWord: function() {return this.words[Math.floor(Math.random()*this.words.length)]},
-    guessesRemaining: 12,
+    guessesRemaining: 13,
     audio: document.getElementById("myAudio"),
+    audioBad: document.getElementById("myAudioBad"),
     playAudio : function() {
         this.audio.play();
+    },
+    playAudioBad : function() {
+        this.audioBad.play();
+    },
+    writeSlate:function(){
+        var z = '';
+        for(i=0;i<output.length;i++){
+            
+                z=z + "_"
+            }
+            document.getElementById("writeline").innerText = z;
     }
   };
   
@@ -12,17 +24,26 @@ var gthth = game.randonWord();
   var output = gthth.split('');
 console.log(output);
 
-var z = '';
-for(i=0;i<output.length;i++){
-    
-        z=z + "_"
-    }
-    document.getElementById("writeline").innerText = z;
+
+game.writeSlate();
 
 var guessed= [];
 var guessedWrong = [];
 
 var wins = 0;
+
+function resetGame(){
+    game.guessesRemaining = 13;
+    document.getElementById("guessesRemaining").innerText = "Guesses Remaining: "+ game.guessesRemaining;
+    game.writeSlate();
+    guessed=[];
+    guessedWrong =[];
+    document.getElementById("guessed").innerText = '';
+    gthth = game.randonWord();
+    output = gthth.split('');
+    game.writeSlate();
+console.log(output);
+}
 
 //key press
 
@@ -51,6 +72,7 @@ document.onkeypress = function (e) {
             game.playAudio();
             wins++;
             document.getElementById("wins").innerText = "Wins: "+ wins;
+            resetGame();
         }
         }else{
             guessedWrong.push(e.key)
@@ -66,20 +88,14 @@ document.onkeypress = function (e) {
             
             document.getElementById("guessesRemaining").innerText = "Guesses Remaining: "+ game.guessesRemaining;
             if(game.guessesRemaining==0){
-                alert(game)
+                game.playAudioBad();
+                resetGame();
             }
         };
     }
 
     
 
-    
-    
-    
-    
-    
-
-    
   };
 
 
